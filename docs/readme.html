@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gitone &#8212; Gitone 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gitone" href="modules.html" />
+    <link rel="prev" title="Welcome to Rmdawn’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Gitone</a></h1>
+
+
+
+<p class="blurb">A Python package for programmatic R markdown workflows</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=marskar&repo=gitone&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Module reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Test reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Rmdawn’s documentation!</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">gitone</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="gitone">
+<h1>Gitone<a class="headerlink" href="#gitone" title="Permalink to this headline">¶</a></h1>
+<p>Combine multiple <strong>git</strong> version controls steps into <strong>one</strong> command.</p>
+<p><a class="reference external" href="https://pypi.python.org/pypi/gitone"><img alt="PyPI" src="https://img.shields.io/pypi/v/gitone.svg" /></a> <a class="reference external" href="https://pyup.io/repos/github/marskar/gitone/"><img alt="Updates" src="https://pyup.io/repos/github/marskar/gitone/shield.svg" /></a></p>
+<p>Unlike git shell commands, <code class="docutils literal notranslate"><span class="pre">gitone</span></code> automatically generates commit messages with every command.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gitone</span></code> Python package consists of 4 shell commands and
+functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">camp</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to tracked files and push the changes to the remote repository.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acmp</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to all files and push the changes to the remote repository.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cam</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to tracked files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acm</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to all files.</p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2019, Martin Skarzynski.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/readme.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/marskar/gitone" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
