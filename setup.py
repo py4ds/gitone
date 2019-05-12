@@ -36,10 +36,10 @@ setuptools.setup(
     description="Extract code, markdown, and yaml files from R markdown.",
     entry_points={
         'console_scripts': [
-            'camp=cli.camp:camp',
-            'acmp=cli.acmp:acmp',
-            'cam=cli.cam:cam',
-            'acm=cli.acm:acm',
+            'camp=cli.camp_cli:camp_cli',
+            'acmp=cli.acmp_cli:acmp_cli',
+            'cam=cli.cam_cli:cam_cli',
+            'acm=cli.acm_cli:acm_cli',
         ],
     },
     install_requires=requirements,
