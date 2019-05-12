@@ -55,6 +55,6 @@ setuptools.setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/marskar/gitone',
-    version='0.0.9',
+    version='0.0.1',
     zip_safe=False,
 )
