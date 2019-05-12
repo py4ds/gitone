@@ -1,4 +1,4 @@
-Welcome to Rmdawn's documentation!
+Welcome to Gitone's documentation!
 ======================================================
 
 .. toctree::
