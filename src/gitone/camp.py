@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from typing import Optional
 
 import git
 
 
-def camp() -> None:
+def camp(commit_message: Optional[str] = None) -> None:
 
     repo = git.Repo()
 
@@ -17,15 +18,22 @@ def camp() -> None:
     if any(changed_file_lists):
         repo.git.add(changed_file_lists)
 
-        prefixes = "Deleted files:", "Modified files:"
+        if commit_message:
+            print(repo.git.commit(changed_file_lists,
+                                  message=commit_message),
+                  repo.git.push())
 
-        deleted, modified = (
-            f"{prefix} {', '.join(changed_files)}. " if changed_files else ""
-            for prefix, changed_files in zip(prefixes, changed_file_lists)
-        )
+        else:
+            prefixes = "Deleted files:", "Modified files:"
 
-        print(repo.git.commit(changed_file_lists, message=deleted + modified),
-              repo.git.push())
+            deleted, modified = (
+                f"{prefix} {', '.join(changed)}. " if changed else ""
+                for prefix, changed in zip(prefixes, changed_file_lists)
+            )
+
+            print(repo.git.commit(changed_file_lists,
+                                  message=deleted + modified),
+                  repo.git.push())
 
 
 if __name__ == "__main__":

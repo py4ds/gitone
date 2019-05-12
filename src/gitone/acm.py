@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from typing import Optional
 
 import git
 
 
-def acm() -> None:
+def acm(commit_message: Optional[str] = None) -> None:
 
     repo = git.Repo()
 
@@ -17,19 +18,24 @@ def acm() -> None:
     ]
 
     if any(untracked + changed_file_lists):
+
         repo.git.add(untracked + changed_file_lists)
 
-        new = f"New files: {', '.join(untracked)}. " if untracked else ""
+        if commit_message:
+            print(repo.git.commit(untracked + changed_file_lists,
+                                  message=commit_message))
+        else:
+            new = f"New files: {', '.join(untracked)}. " if untracked else ""
 
-        prefixes = "Deleted files:", "Modified files:"
+            prefixes = "Deleted files:", "Modified files:"
 
-        deleted, modified = (
-            f"{prefix} {', '.join(changed_files)}. " if changed_files else ""
-            for prefix, changed_files in zip(prefixes, changed_file_lists)
-        )
+            deleted, modified = (
+                f"{prefix} {', '.join(changed)}. " if changed else ""
+                for prefix, changed in zip(prefixes, changed_file_lists)
+            )
 
-        print(repo.git.commit(untracked + changed_file_lists,
-                              message=new + deleted + modified))
+            print(repo.git.commit(untracked + changed_file_lists,
+                                  message=new + deleted + modified))
 
     else:
         print("There are no new, deleted, or modified files.")
