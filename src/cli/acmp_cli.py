@@ -6,5 +6,6 @@ from gitone.acmp import acmp
 
 
 @click.command()
-def acmp_cli() -> None:
-    acmp()
+@click.option("-m", "--message", "message")
+def acmp_cli(message: str) -> None:
+    acmp(message) if message else acmp()

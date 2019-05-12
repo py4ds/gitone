@@ -6,5 +6,6 @@ from gitone.camp import camp
 
 
 @click.command()
-def camp_cli() -> None:
-    camp()
+@click.option("-m", "--message", "message")
+def camp_cli(message: str) -> None:
+    camp(message) if message else camp()

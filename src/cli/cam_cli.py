@@ -6,5 +6,6 @@ from gitone.cam import cam
 
 
 @click.command()
-def cam_cli() -> None:
-    cam()
+@click.option("-m", "--message", "message")
+def cam_cli(message: str) -> None:
+    cam(message) if message else cam()

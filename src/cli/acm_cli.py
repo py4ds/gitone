@@ -6,5 +6,6 @@ from gitone.acm import acm
 
 
 @click.command()
-def acm_cli() -> None:
-    acm()
+@click.option("-m", "--message", "message")
+def acm_cli(message: str) -> None:
+    acm(message) if message else acm()
