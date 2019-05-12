@@ -28,3 +28,6 @@ def cam() -> None:
     else:
         print("There are no deleted or modified files.")
 
+
+if __name__ == "__main__":
+    cam()

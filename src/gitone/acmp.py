@@ -35,3 +35,6 @@ def acmp() -> None:
     else:
         print("There are no new, deleted, or modified files.")
 
+
+if __name__ == "__main__":
+    acmp()

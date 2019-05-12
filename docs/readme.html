@@ -48,7 +48,12 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Project overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Module reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tests.html">Test reference</a></li>
 </ul>
@@ -92,6 +97,8 @@
 <h1>Gitone<a class="headerlink" href="#gitone" title="Permalink to this headline">¶</a></h1>
 <p>Combine multiple <strong>git</strong> version controls steps into <strong>one</strong> command.</p>
 <p><a class="reference external" href="https://pypi.python.org/pypi/gitone"><img alt="PyPI" src="https://img.shields.io/pypi/v/gitone.svg" /></a> <a class="reference external" href="https://pyup.io/repos/github/marskar/gitone/"><img alt="Updates" src="https://pyup.io/repos/github/marskar/gitone/shield.svg" /></a></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Unlike git shell commands, <code class="docutils literal notranslate"><span class="pre">gitone</span></code> automatically generates commit messages with every command.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">gitone</span></code> Python package consists of 4 shell commands and
 functions:</p>
@@ -101,6 +108,30 @@ functions:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">cam</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to tracked files.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">acm</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> will add and commit all changes made to all files.</p></li>
 </ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install gitone
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>No need to pass any arguments.</p>
+<p>Just run one of available shell commands or Python functions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">camp</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">acmp</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cam</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">acm</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ camp
+$ acmp
+$ cam
+$ acm
+</pre></div>
+</div>
+</div>
 </div>
 
 

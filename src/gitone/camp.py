@@ -26,5 +26,6 @@ def camp() -> None:
         print(repo.git.commit(changed_file_lists, message=deleted + modified),
               repo.git.push())
 
+
 if __name__ == "__main__":
     camp()
