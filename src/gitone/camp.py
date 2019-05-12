@@ -5,6 +5,7 @@ import git
 
 
 def camp() -> None:
+
     repo = git.Repo()
 
     changed_file_lists = [

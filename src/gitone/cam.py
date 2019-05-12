@@ -5,6 +5,7 @@ import git
 
 
 def cam() -> None:
+
     repo = git.Repo()
 
     changed_file_lists = [

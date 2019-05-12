@@ -4,7 +4,7 @@
 import git
 
 
-def acm(string, start):
+def acm() -> None:
 
     repo = git.Repo()
 
