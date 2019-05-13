@@ -35,6 +35,9 @@ def camp(commit_message: Optional[str] = None) -> None:
                                   message=deleted + modified),
                   repo.git.push())
 
+    else:
+        print("There are no deleted or modified files.")
+
 
 if __name__ == "__main__":
     camp()
