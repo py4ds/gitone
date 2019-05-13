@@ -6,6 +6,7 @@ import git
 
 
 def cam(commit_message: Optional[str] = None) -> None:
+    """Add and commit changes made to tracked files."""
 
     repo = git.Repo()
 

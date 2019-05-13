@@ -13,7 +13,7 @@ Unlike git shell commands, ``gitone`` automatically generates commit messages wi
 The ``gitone`` Python package consists of 4 shell commands and
 functions:
 
-- ``camp``, which stands for ``git commit -am`` and ``git push`` will add and commit all changes made to tracked files and push the changes to the remote repository.
+- ``camp``, which stands for ``git commit -am`` and ``git push`` will add and commit all changes made to tracked files and push the commit to the remote repository.
 - ``acmp``, which stands for ``git add``, ``git commit -m`` and ``git push`` will add and commit all changes made to all files and push the changes to the remote repository.
 - ``cam``, which stands for ``git commit -am`` and ``git push`` will add and commit all changes made to tracked files.
 - ``acm``, which stands for ``git add``, ``git commit -m`` and ``git push`` will add and commit all changes made to all files.

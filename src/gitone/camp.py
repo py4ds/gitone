@@ -6,6 +6,7 @@ import git
 
 
 def camp(commit_message: Optional[str] = None) -> None:
+    """Add and commit changes made to tracked files, then push the commit."""
 
     repo = git.Repo()
 

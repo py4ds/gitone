@@ -6,6 +6,7 @@ import git
 
 
 def acmp(commit_message: Optional[str] = None) -> None:
+    """Add and commit all changes, then push the commit."""
 
     repo = git.Repo()
 
