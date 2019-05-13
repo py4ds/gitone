@@ -49,6 +49,7 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Project overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">gitone package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -110,7 +111,7 @@
 <span id="gitone-acm-module"></span><h2>gitone.acm module<a class="headerlink" href="#module-gitone.acm" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="gitone.acm.acm">
-<code class="descclassname">gitone.acm.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>string</em>, <em>start</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm.acm" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.acm.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm.acm" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -118,7 +119,7 @@
 <span id="gitone-acmp-module"></span><h2>gitone.acmp module<a class="headerlink" href="#module-gitone.acmp" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="gitone.acmp.acmp">
-<code class="descclassname">gitone.acmp.</code><code class="descname">acmp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp.acmp" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.acmp.</code><code class="descname">acmp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp.acmp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -126,7 +127,7 @@
 <span id="gitone-cam-module"></span><h2>gitone.cam module<a class="headerlink" href="#module-gitone.cam" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="gitone.cam.cam">
-<code class="descclassname">gitone.cam.</code><code class="descname">cam</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam.cam" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.cam.</code><code class="descname">cam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam.cam" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -134,33 +135,13 @@
 <span id="gitone-camp-module"></span><h2>gitone.camp module<a class="headerlink" href="#module-gitone.camp" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="gitone.camp.camp">
-<code class="descclassname">gitone.camp.</code><code class="descname">camp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp.camp" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.camp.</code><code class="descname">camp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp.camp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-gitone">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gitone" title="Permalink to this headline">¶</a></h2>
 <p>gitone: a Python package that facilitates git version control.</p>
-<dl class="function">
-<dt id="gitone.camp">
-<code class="descclassname">gitone.</code><code class="descname">camp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="gitone.acmp">
-<code class="descclassname">gitone.</code><code class="descname">acmp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="gitone.cam">
-<code class="descclassname">gitone.</code><code class="descname">cam</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="gitone.acm">
-<code class="descclassname">gitone.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>string</em>, <em>start</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </div>
 </div>
 

@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Command line interface (CLI) for the acmp() function."""
-
 import click
 from gitone.acmp import acmp
 
 
 @click.command()
-@click.option("-m", "--message", "message")
+@click.argument("message", required=False, default="")
 def acmp_cli(message: str) -> None:
+    """Command line interface (CLI) for the ``acmp()`` function.
+
+    :param message: The commit message to be passed to ``acmp()``.
+    """
     acmp(message) if message else acmp()
