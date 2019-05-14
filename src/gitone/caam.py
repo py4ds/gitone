@@ -13,7 +13,7 @@ def caam(commit_message: Optional[str] = None) -> None:
            if the ``message`` argument is not provided.
     """
 
-    repo = git.Repo()
+    repo = git.Repo(search_parent_directories=True)
 
     print(repo.git.add("--update"))
 

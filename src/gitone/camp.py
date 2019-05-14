@@ -12,7 +12,7 @@ def camp(commit_message: Optional[str] = None) -> None:
     :note: A commit message will be automatically generated
            if the ``message`` argument is not provided.
     """
-    repo = git.Repo()
+    repo = git.Repo(search_parent_directories=True)
 
     changed_file_lists = [
         [file.a_path
