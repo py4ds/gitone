@@ -26,7 +26,7 @@ def camp(commit_message: Optional[str] = None) -> None:
         )
 
         print(f"Adding {deleted + modified}.",
-              repo.git.add(changed_file_lists))
+              repo.git.add(u=True))
 
         if commit_message:
             print(repo.git.commit(changed_file_lists,

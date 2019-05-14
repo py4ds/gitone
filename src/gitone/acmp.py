@@ -30,7 +30,7 @@ def acmp(commit_message: Optional[str] = None) -> None:
         )
 
         print(f"Adding {new + deleted + modified}.",
-              repo.git.add(untracked + changed_file_lists))
+              repo.git.add("--all"))
 
         if commit_message:
 
