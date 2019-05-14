@@ -25,7 +25,7 @@ def cam(commit_message: Optional[str] = None) -> None:
             for prefix, changed in zip(prefixes, changed_file_lists)
         )
 
-        print(f"Adding {deleted + modified}.",
+        print("Adding deleted and modified files",
               repo.git.add("--update"))
 
         if commit_message:
