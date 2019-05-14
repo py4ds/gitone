@@ -17,7 +17,8 @@ def cam(commit_message: Optional[str] = None) -> None:
     ]
 
     if any(changed_file_lists):
-        repo.git.add(changed_file_lists)
+
+        print(repo.git.add(changed_file_lists))
 
         if commit_message:
             print(repo.git.commit(changed_file_lists,

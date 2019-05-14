@@ -20,7 +20,7 @@ def acm(commit_message: Optional[str] = None) -> None:
 
     if any(untracked + changed_file_lists):
 
-        repo.git.add(untracked + changed_file_lists)
+        print(repo.git.add(untracked + changed_file_lists))
 
         if commit_message:
             print(repo.git.commit(untracked + changed_file_lists,
