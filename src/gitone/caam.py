@@ -16,7 +16,6 @@ def caam(commit_message: Optional[str] = None) -> None:
         print(repo.git.commit("--all", "--amend", message=commit_message))
 
     else:
-
         print(repo.git.commit("--amend", "--reuse-message=HEAD"))
 
 
