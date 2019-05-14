@@ -29,7 +29,7 @@ def acmp(commit_message: Optional[str] = None) -> None:
             for prefix, changed in zip(prefixes, changed_file_lists)
         )
 
-        print(f"Adding {', '.join(new + deleted + modified}.",
+        print(f"Adding {', '.join(new + deleted + modified)}.",
               repo.git.add(untracked + changed_file_lists))
 
         if commit_message:
