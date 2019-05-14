@@ -5,8 +5,8 @@ from typing import Optional
 import git
 
 
-def caam(commit_message: Optional[str] = None) -> None:
-    """Amend the previous commit with new changes made to tracked files."""
+def acam(commit_message: Optional[str] = None) -> None:
+    """Amend the previous commit with new changes."""
 
     repo = git.Repo()
 
@@ -20,4 +20,4 @@ def caam(commit_message: Optional[str] = None) -> None:
 
 
 if __name__ == "__main__":
-    caam()
+    acam()
