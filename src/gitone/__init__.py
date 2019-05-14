@@ -2,4 +2,4 @@
 """gitone: a Python package that facilitates git version control."""
 
 __author__ = "Martin Skarzynski"
-__version__ = '0.0.15'
+__version__ = '0.0.16'
