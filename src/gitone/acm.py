@@ -20,20 +20,22 @@ def acm(commit_message: Optional[str] = None) -> None:
 
     if any(untracked + changed_file_lists):
 
-        print(repo.git.add(untracked + changed_file_lists))
+        new = f"New files: {', '.join(untracked)}. " if untracked else ""
+
+        prefixes = "Deleted files:", "Modified files:"
+
+        deleted, modified = (
+            f"{prefix} {', '.join(changed)}. " if changed else ""
+            for prefix, changed in zip(prefixes, changed_file_lists)
+        )
+
+        print(f"Adding {', '.join(new + deleted + modified}.",
+              repo.git.add(untracked + changed_file_lists))
 
         if commit_message:
             print(repo.git.commit(untracked + changed_file_lists,
                                   message=commit_message))
         else:
-            new = f"New files: {', '.join(untracked)}. " if untracked else ""
-
-            prefixes = "Deleted files:", "Modified files:"
-
-            deleted, modified = (
-                f"{prefix} {', '.join(changed)}. " if changed else ""
-                for prefix, changed in zip(prefixes, changed_file_lists)
-            )
 
             print(repo.git.commit(untracked + changed_file_lists,
                                   message=new + deleted + modified))

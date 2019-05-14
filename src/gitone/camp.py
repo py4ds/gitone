@@ -18,26 +18,28 @@ def camp(commit_message: Optional[str] = None) -> None:
 
     if any(changed_file_lists):
 
-        print(repo.git.add(changed_file_lists))
+        prefixes = "Deleted files:", "Modified files:"
+
+        deleted, modified = (
+            f"{prefix} {', '.join(changed)}. " if changed else ""
+            for prefix, changed in zip(prefixes, changed_file_lists)
+        )
+
+        print(f"Adding {', '.join(deleted + modified}.",
+              repo.git.add(changed_file_lists))
 
         if commit_message:
             print(repo.git.commit(changed_file_lists,
                                   message=commit_message),
                   repo.git.push(),
-                  f"Pushing to {', '.join(repo.remote().urls)}.")
+                  f"\nPushing to {', '.join(repo.remote().urls)}.")
 
         else:
-            prefixes = "Deleted files:", "Modified files:"
-
-            deleted, modified = (
-                f"{prefix} {', '.join(changed)}. " if changed else ""
-                for prefix, changed in zip(prefixes, changed_file_lists)
-            )
 
             print(repo.git.commit(changed_file_lists,
                                   message=deleted + modified),
                   repo.git.push(),
-                  f"Pushing to {', '.join(repo.remote().urls)}.")
+                  f"\nPushing to {', '.join(repo.remote().urls)}.")
 
     else:
         print("There are no deleted or modified files.")
