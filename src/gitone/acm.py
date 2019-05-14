@@ -6,7 +6,12 @@ import git
 
 
 def acm(commit_message: Optional[str] = None) -> None:
-    """Add and commit all changes."""
+    """Add and commit all changes.
+
+    :param message: The commit message to be passed to the git commit command.
+    :note: A commit message will be automatically generated
+           if the ``message`` argument is not provided.
+    """
 
     repo = git.Repo()
 

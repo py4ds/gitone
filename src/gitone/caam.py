@@ -6,7 +6,12 @@ import git
 
 
 def caam(commit_message: Optional[str] = None) -> None:
-    """Amend the previous commit with new changes made to tracked files."""
+    """Amend the previous commit with changes made to tracked files.
+
+    :param message: The commit message to be passed to the git commit command.
+    :note: A commit message will be automatically generated
+           if the ``message`` argument is not provided.
+    """
 
     repo = git.Repo()
 
