@@ -10,5 +10,5 @@ from gitone.caam import caam
 from gitone.acam import acam
 
 __author__ = "Martin Skarzynski"
-__version__ = '0.0.19'
+__version__ = '0.0.20'
 __all__ = ["camp", "acmp", "cam", "acm", "caamp", "acamp", "caam", "acam"]
