@@ -52,15 +52,6 @@
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">gitone package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.acam">gitone.acam module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.acamp">gitone.acamp module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.acm">gitone.acm module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.acmp">gitone.acmp module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.caam">gitone.caam module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.caamp">gitone.caamp module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.cam">gitone.cam module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-gitone.camp">gitone.camp module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-gitone">Module contents</a></li>
 </ul>
 </li>
@@ -108,140 +99,12 @@
             
   <div class="section" id="gitone-package">
 <h1>gitone package<a class="headerlink" href="#gitone-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-gitone.acam">
-<span id="gitone-acam-module"></span><h2>gitone.acam module<a class="headerlink" href="#module-gitone.acam" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-gitone">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gitone" title="Permalink to this headline">¶</a></h2>
+<p>gitone: a Python package that facilitates git version control.</p>
 <dl class="function">
-<dt id="gitone.acam.acam">
-<code class="descclassname">gitone.acam.</code><code class="descname">acam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acam.html#acam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acam.acam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with any new changes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.acamp">
-<span id="gitone-acamp-module"></span><h2>gitone.acamp module<a class="headerlink" href="#module-gitone.acamp" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.acamp.acam">
-<code class="descclassname">gitone.acamp.</code><code class="descname">acam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamp.html#acam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamp.acam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with any new changes, then push the commit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.acm">
-<span id="gitone-acm-module"></span><h2>gitone.acm module<a class="headerlink" href="#module-gitone.acm" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.acm.acm">
-<code class="descclassname">gitone.acm.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm.acm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add and commit all changes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.acmp">
-<span id="gitone-acmp-module"></span><h2>gitone.acmp module<a class="headerlink" href="#module-gitone.acmp" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.acmp.acmp">
-<code class="descclassname">gitone.acmp.</code><code class="descname">acmp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp.acmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add and commit all changes, then push the commit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.caam">
-<span id="gitone-caam-module"></span><h2>gitone.caam module<a class="headerlink" href="#module-gitone.caam" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.caam.caam">
-<code class="descclassname">gitone.caam.</code><code class="descname">caam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/caam.html#caam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.caam.caam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with changes made to tracked files.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.caamp">
-<span id="gitone-caamp-module"></span><h2>gitone.caamp module<a class="headerlink" href="#module-gitone.caamp" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.caamp.caamp">
-<code class="descclassname">gitone.caamp.</code><code class="descname">caamp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/caamp.html#caamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.caamp.caamp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with changes made to tracked files, then push.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.cam">
-<span id="gitone-cam-module"></span><h2>gitone.cam module<a class="headerlink" href="#module-gitone.cam" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.cam.cam">
-<code class="descclassname">gitone.cam.</code><code class="descname">cam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam.cam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add and commit changes made to tracked files.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-gitone.camp">
-<span id="gitone-camp-module"></span><h2>gitone.camp module<a class="headerlink" href="#module-gitone.camp" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="gitone.camp.camp">
-<code class="descclassname">gitone.camp.</code><code class="descname">camp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp.camp" title="Permalink to this definition">¶</a></dt>
+<dt id="gitone.camp">
+<code class="descclassname">gitone.</code><code class="descname">camp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add and commit changes made to tracked files, then push the commit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -254,10 +117,51 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-gitone">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gitone" title="Permalink to this headline">¶</a></h2>
-<p>gitone: a Python package that facilitates git version control.</p>
+<dl class="function">
+<dt id="gitone.acmp">
+<code class="descclassname">gitone.</code><code class="descname">acmp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add and commit all changes, then push the commit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>A commit message will be automatically generated
+if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="gitone.cam">
+<code class="descclassname">gitone.</code><code class="descname">cam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add and commit changes made to tracked files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>A commit message will be automatically generated
+if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="gitone.acm">
+<code class="descclassname">gitone.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add and commit all changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>A commit message will be automatically generated
+if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

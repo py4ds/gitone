@@ -103,7 +103,7 @@
 <span class="sd">           if the ``message`` argument is not provided.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">repo</span> <span class="o">=</span> <span class="n">git</span><span class="o">.</span><span class="n">Repo</span><span class="p">()</span>
+    <span class="n">repo</span> <span class="o">=</span> <span class="n">git</span><span class="o">.</span><span class="n">Repo</span><span class="p">(</span><span class="n">search_parent_directories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="n">changed_file_lists</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">a_path</span>

@@ -57,7 +57,7 @@ docs/index.html: clean $(DOCS) $(TESTS) $(SRC) ## generate Sphinx HTML documenta
 	# rm docs/*.html
 	# rm -rf docs/_modules docs/_sources docs/_static
 	mv docs html
-	sphinx-apidoc -fo html/source src/$(PKG)
+	sphinx-apidoc -fo html/source src/$(PKG) src/$(PKG)/a*.py src/$(PKG)/c*.py
 	sphinx-apidoc -fo html/source --tocfile tests tests
 	sphinx-build -M html html/source .
 	mv html docs
