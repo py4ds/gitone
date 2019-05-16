@@ -94,6 +94,7 @@
 
 <span class="kn">import</span> <span class="nn">git</span>
 
+<span class="kn">from</span> <span class="nn">gitone.acamendm</span> <span class="k">import</span> <span class="n">acamendm</span>
 
 <div class="viewcode-block" id="acamendmp"><a class="viewcode-back" href="../../gitone.html#gitone.acamendmp">[docs]</a><span class="k">def</span> <span class="nf">acamendmp</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Amend the previous commit with any new changes, then push the commit.</span>
@@ -103,17 +104,10 @@
 <span class="sd">           if the ``message`` argument is not provided.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="n">acamendm</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span> <span class="k">if</span> <span class="n">message</span> <span class="k">else</span> <span class="n">acamendm</span><span class="p">()</span>
     <span class="n">repo</span> <span class="o">=</span> <span class="n">git</span><span class="o">.</span><span class="n">Repo</span><span class="p">(</span><span class="n">search_parent_directories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;--all&quot;</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">message</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;--all&quot;</span><span class="p">,</span> <span class="s2">&quot;--amend&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">))</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;--amend&quot;</span><span class="p">,</span> <span class="s2">&quot;--reuse-message=HEAD&quot;</span><span class="p">),</span>
-              <span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;--force&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Pushing to {&#39;, &#39;.join(repo.remote().urls)}.&quot;</span><span class="p">)</span></div>
+    <span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;--force&quot;</span><span class="p">)</span>
+    <span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">status</span><span class="p">()</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
