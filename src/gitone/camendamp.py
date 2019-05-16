@@ -18,6 +18,7 @@ def camendamp(message: Optional[str] = None) -> None:
     camendam(message=message) if message else camendam()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push("--force")
+    repo.git.status()
 
 
 if __name__ == "__main__":

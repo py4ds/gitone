@@ -17,6 +17,7 @@ def acamendmp(message: Optional[str] = None) -> None:
     acamendm(message=message) if message else acamendm()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push("--force"))
+    repo.git.status()
 
 
 if __name__ == "__main__":
