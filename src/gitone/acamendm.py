@@ -5,11 +5,11 @@ from typing import Optional
 import git
 
 
-def acamendm(commit_message: Optional[str] = None) -> None:
+def acamendm(message: Optional[str] = None) -> None:
     """Amend the previous commit with any new changes.
 
     :param message: The commit message to be passed to the git commit command.
-    :note: A commit message will be automatically generated
+    :note: The previous commit message will be reused
            if the ``message`` argument is not provided.
     """
 

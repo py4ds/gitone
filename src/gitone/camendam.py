@@ -5,11 +5,11 @@ from typing import Optional
 import git
 
 
-def camendam(commit_message: Optional[str] = None) -> None:
+def camendam(message: Optional[str] = None) -> None:
     """Amend the previous commit with changes made to tracked files.
 
     :param message: The commit message to be passed to the git commit command.
-    :note: A commit message will be automatically generated
+    :note: The previous commit message will be reused
            if the ``message`` argument is not provided.
     """
 
@@ -17,8 +17,8 @@ def camendam(commit_message: Optional[str] = None) -> None:
 
     print(repo.git.add("--update"))
 
-    if commit_message:
-        print(repo.git.commit("--all", "--amend", message=commit_message))
+    if message:
+        print(repo.git.commit("--all", "--amend", message=message))
 
     else:
         print(repo.git.commit("--amend", "--reuse-message=HEAD"))
