@@ -20,23 +20,22 @@ def cam(message: Optional[str] = None) -> None:
             for file in diff.iter_change_type(change_type):
                 yield file.a_path
 
-    dellist, modlist = (list(get_changes(c_type)) for c_type in ('D', 'M'))
-    changed_list = dellist + modlist
+    del_list = list(set(get_changes('D')))
+    mod_list = list(set(get_changes('M')))
+    changed = del_list + mod_list
 
-    if any(changed_list):
+    if any(changed):
 
-        deleted = f"Deleted files: {', '.join(dellist)}. " if dellist else ""
-        modified = f"Modified files: {', '.join(modlist)}." if modlist else ""
-
-        auto_message = deleted + modified
+        del_str = f"Deleted files: {', '.join(del_list)}. " if del_list else ""
+        mod_str = f"Modified files: {', '.join(mod_list)}." if mod_list else ""
 
         print(repo.git.add("--update"))
 
         if message:
-            print(repo.git.commit(changed_list, message=message))
+            print(repo.git.commit(changed, message=message))
 
         else:
-            print(repo.git.commit(changed_list, message=auto_message))
+            print(repo.git.commit(changed, message=del_str + mod_str))
 
     else:
         print("There are no deleted or modified files.")
