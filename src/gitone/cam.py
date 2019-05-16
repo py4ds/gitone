@@ -47,8 +47,6 @@ def cam(message: Optional[str] = None) -> None:
 
         print("Adding deleted and modified files.",
               repo.git.add("--update"))
-        print("Deleted files:", deleted)
-        print("Modified files:", modified_file_lists)
 
         if message:
             print(repo.git.commit(changed_file_lists,

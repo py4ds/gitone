@@ -17,32 +17,47 @@ def acm(message: Optional[str] = None) -> None:
 
     untracked = repo.untracked_files
 
-    changed_file_lists = [
-        [file.a_path
-         for file in repo.index.diff(None).iter_change_type(change_type)]
-        for change_type in ('D', 'M')
+    diffs = repo.index.diff(None), repo.index.diff(repo.head.commit)
+
+    deleted_file_lists = [
+        [file.a_path for file
+         in diff.iter_change_type('D')]
+        for diff in diffs
     ]
 
-    if any(untracked + changed_file_lists):
+    modified_file_lists = [
+        [file.a_path for file
+         in diff.iter_change_type('M')]
+        for diff in diffs
+    ]
+
+    changed_file_lists = untracked + deleted_file_lists + modified_file_lists
+
+    if any(changed_file_lists):
 
         new = f"New files: {', '.join(untracked)}. " if untracked else ""
 
-        prefixes = "Deleted files:", "Modified files:"
+        deleted = [
+            f"Deleted files: {', '.join(deleted_file_list)}. "
+            if deleted_file_lists else ""
+            for deleted_file_list in deleted_file_lists
+        ]
 
-        deleted, modified = (
-            f"{prefix} {', '.join(changed)}. " if changed else ""
-            for prefix, changed in zip(prefixes, changed_file_lists)
-        )
+        modified = [
+            f"Modified files: {', '.join(modified_file_list)}. "
+            if modified_file_list else ""
+            for modified_file_list in modified_file_lists
+        ]
 
         print(f"Adding new, deleted, and modified files.",
               repo.git.add("--all"))
 
-        if commit_message:
-            print(repo.git.commit(untracked + changed_file_lists,
-                                  message=commit_message))
+        if message:
+            print(repo.git.commit(changed_file_lists,
+                                  message=message))
         else:
 
-            print(repo.git.commit(untracked + changed_file_lists,
+            print(repo.git.commit(changed_file_lists,
                                   message=new + deleted + modified))
 
     else:
