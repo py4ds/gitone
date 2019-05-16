@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from typing import Optional
-from itertools import chain
 
 import git
 
 
-def cam(commit_message: Optional[str] = None) -> None:
+def cam(message: Optional[str] = None) -> None:
     """Add and commit changes made to tracked files.
 
     :param message: The commit message to be passed to the git commit command.
@@ -16,13 +15,15 @@ def cam(commit_message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
-    diffs = [repo.index.diff(None), repo.index.diff(repo.head.commit)]
+    diffs = repo.index.diff(None), repo.index.diff(repo.head.commit)
 
     changed_file_lists = [
         [file.a_path
          for file in diff.iter_change_type(change_type)]
         for diff, change_type in zip(diffs, ('D', 'M'))
     ]
+
+    print(changed_file_lists)
 
     if any(changed_file_lists):
 
@@ -36,9 +37,9 @@ def cam(commit_message: Optional[str] = None) -> None:
         print("Adding deleted and modified files.",
               repo.git.add("--update"))
 
-        if commit_message:
+        if message:
             print(repo.git.commit(changed_file_lists,
-                                  message=commit_message))
+                                  message=message))
 
         else:
 
