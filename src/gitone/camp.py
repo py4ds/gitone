@@ -17,7 +17,6 @@ def camp(message: Optional[str] = None) -> None:
     cam(message=message) if message else cam()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push()
-    print(f"Pushing to {', '.join(repo.remote().urls)}.")
 
 
 if __name__ == "__main__":

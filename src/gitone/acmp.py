@@ -18,7 +18,6 @@ def acmp(message: Optional[str] = None) -> None:
     acm(message=message) if message else acm()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push()
-    print(f"Pushing to {', '.join(repo.remote().urls)}.")
 
 
 if __name__ == "__main__":

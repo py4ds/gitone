@@ -23,7 +23,6 @@ def acamendmp(message: Optional[str] = None) -> None:
     else:
         print(repo.git.commit("--amend", "--reuse-message=HEAD"),
               repo.git.push("--force"))
-    print(f"Pushing to {', '.join(repo.remote().urls)}.")
 
 
 if __name__ == "__main__":
