@@ -4,6 +4,7 @@ from typing import Optional
 
 import git
 
+from gitone.acamendm import acamendm
 
 def acamendmp(message: Optional[str] = None) -> None:
     """Amend the previous commit with any new changes, then push the commit.
@@ -13,16 +14,9 @@ def acamendmp(message: Optional[str] = None) -> None:
            if the ``message`` argument is not provided.
     """
 
+    acamendm(message=message) if message else acamendm()
     repo = git.Repo(search_parent_directories=True)
-
-    print(repo.git.add("--all"))
-
-    if message:
-        print(repo.git.commit("--all", "--amend", message=message))
-
-    else:
-        print(repo.git.commit("--amend", "--reuse-message=HEAD"),
-              repo.git.push("--force"))
+    repo.git.push("--force"))
 
 
 if __name__ == "__main__":

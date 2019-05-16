@@ -15,8 +15,8 @@ def camendamp(message: Optional[str] = None) -> None:
            if the ``message`` argument is not provided.
     """
 
-    repo = git.Repo(search_parent_directories=True)
     camendam(message=message) if message else camendam()
+    repo = git.Repo(search_parent_directories=True)
     repo.git.push("--force")
 
 
