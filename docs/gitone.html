@@ -104,8 +104,8 @@
 <p>gitone: a Python package that facilitates git version control.</p>
 <dl class="function">
 <dt id="gitone.camp">
-<code class="descclassname">gitone.</code><code class="descname">camp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add and commit changes made to tracked files, then push the commit.</p>
+<code class="descclassname">gitone.</code><code class="descname">camp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camp.html#camp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add and commit all changes made to tracked files, then push the commit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
@@ -119,7 +119,7 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.acmp">
-<code class="descclassname">gitone.</code><code class="descname">acmp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">acmp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acmp.html#acmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acmp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add and commit all changes, then push the commit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -134,8 +134,8 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.cam">
-<code class="descclassname">gitone.</code><code class="descname">cam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add and commit changes made to tracked files.</p>
+<code class="descclassname">gitone.</code><code class="descname">cam</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/cam.html#cam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Commit all changes made to tracked files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
@@ -149,7 +149,7 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.acm">
-<code class="descclassname">gitone.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">acm</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acm.html#acm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add and commit all changes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -164,14 +164,14 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.camendamp">
-<code class="descclassname">gitone.</code><code class="descname">camendamp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendamp.html#camendamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendamp" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">camendamp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendamp.html#camendamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with changes made to tracked files, then push.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
 </dd>
 <dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
+<dd class="field-even"><p>The previous commit message will be reused
 if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
 </dd>
 </dl>
@@ -179,14 +179,14 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.acamendmp">
-<code class="descclassname">gitone.</code><code class="descname">acamendmp</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendmp.html#acamendmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendmp" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">acamendmp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendmp.html#acamendmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendmp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with any new changes, then push the commit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
 </dd>
 <dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
+<dd class="field-even"><p>The previous commit message will be reused
 if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
 </dd>
 </dl>
@@ -194,14 +194,14 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.camendam">
-<code class="descclassname">gitone.</code><code class="descname">camendam</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendam.html#camendam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendam" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">camendam</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendam.html#camendam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendam" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with changes made to tracked files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
 </dd>
 <dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
+<dd class="field-even"><p>The previous commit message will be reused
 if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
 </dd>
 </dl>
@@ -209,14 +209,14 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 
 <dl class="function">
 <dt id="gitone.acamendm">
-<code class="descclassname">gitone.</code><code class="descname">acamendm</code><span class="sig-paren">(</span><em>commit_message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendm.html#acamendm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendm" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">gitone.</code><code class="descname">acamendm</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendm.html#acamendm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with any new changes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
 </dd>
 <dt class="field-even">Note</dt>
-<dd class="field-even"><p>A commit message will be automatically generated
+<dd class="field-even"><p>The previous commit message will be reused
 if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
 </dd>
 </dl>
