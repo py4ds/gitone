@@ -17,7 +17,7 @@ def aamendp(message: Optional[str] = None) -> None:
     aamend(message=message) if message else aamend()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push("--force")
-    repo.git.status()
+    print(repo.git.status())
 
 
 if __name__ == "__main__":

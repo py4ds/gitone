@@ -18,7 +18,7 @@ def amendp(message: Optional[str] = None) -> None:
     amend(message=message) if message else amend()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push("--force")
-    repo.git.status()
+    print(repo.git.status())
 
 
 if __name__ == "__main__":
