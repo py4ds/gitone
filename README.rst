@@ -10,13 +10,20 @@ Introduction
 
 Unlike git shell commands, ``gitone`` automatically generates commit messages with every command.
 
-The ``gitone`` Python package consists of 4 shell commands and
+The ``gitone`` Python package consists of 8 shell commands and
 functions:
 
-- ``camp``, which stands for ``git commit -am`` and ``git push`` will add and commit all changes made to tracked files and push the commit to the remote repository.
-- ``acmp``, which stands for ``git add``, ``git commit -m`` and ``git push`` will add and commit all changes made to all files and push the changes to the remote repository.
-- ``cam``, which stands for ``git commit -am`` and ``git push`` will add and commit all changes made to tracked files.
-- ``acm``, which stands for ``git add``, ``git commit -m`` and ``git push`` will add and commit all changes made to all files.
+- ``camp``, which stands for ``git commit -am`` and ``git push``, will add and commit all changes made to tracked files and push the commit to the remote repository.
+- ``acmp``, which stands for ``git add``, ``git commit -m`` and ``git push``, will add and commit all changes made to all files and push the changes to the remote repository.
+- ``cam``, which stands for ``git commit -am``, will add and commit all changes made to tracked files.
+- ``acm``, which stands for ``git add``, ``git commit -m`` and ``git push``, will add and commit all changes made to all files.
+
+and the ``--amend`` version of the above function:
+
+- ``camendamp``, which stands for ``git commit --amend -am`` and ``git push --force``, will overwrite the previous commit by adding and committing all changes made to tracked files and then force push the overwritten commit to the remote repository.
+- ``acamendmp``, which stands for ``git add``, ``git commit --amend -m`` and ``git push --force``, will overwrite the previous commit by adding and committing all changes made to all files and then force push the overwritten commit to the remote repository.
+- ``camendam``, which stands for ``git commit --amend -am``, will overwrite the previous commit by adding and committing all changes made to tracked files.
+- ``acamendm``, which stands for ``git add``, ``git commit --amend -m``, will overwrite the previous commit by adding and committing all changes made to all files.
 
 
 Installation

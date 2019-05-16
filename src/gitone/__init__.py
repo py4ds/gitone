@@ -4,11 +4,11 @@ from gitone.camp import camp
 from gitone.acmp import acmp
 from gitone.cam import cam
 from gitone.acm import acm
-from gitone.caamp import caamp
-from gitone.acamp import acamp
-from gitone.caam import caam
-from gitone.acam import acam
+from gitone.camendamp import camendamp
+from gitone.acamendmp import acamendmp
+from gitone.camendam import camendam
+from gitone.acamendm import acamendm
 
 __author__ = "Martin Skarzynski"
 __version__ = '0.0.20'
-__all__ = ["camp", "acmp", "cam", "acm", "caamp", "acamp", "caam", "acam"]
+__all__ = ["camp", "acmp", "cam", "acm", "camendamp", "acamendmp", "camendam", "acamendm"]

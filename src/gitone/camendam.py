@@ -5,8 +5,8 @@ from typing import Optional
 import git
 
 
-def acamp(commit_message: Optional[str] = None) -> None:
-    """Amend the previous commit with any new changes, then push the commit.
+def camendam(commit_message: Optional[str] = None) -> None:
+    """Amend the previous commit with changes made to tracked files.
 
     :param message: The commit message to be passed to the git commit command.
     :note: A commit message will be automatically generated
@@ -15,15 +15,14 @@ def acamp(commit_message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
-    print(repo.git.add("--all"))
+    print(repo.git.add("--update"))
 
     if commit_message:
         print(repo.git.commit("--all", "--amend", message=commit_message))
 
     else:
-        print(repo.git.commit("--amend", "--reuse-message=HEAD"),
-              repo.git.push("--force"))
+        print(repo.git.commit("--amend", "--reuse-message=HEAD"))
 
 
 if __name__ == "__main__":
-    acamp()
+    camendam()

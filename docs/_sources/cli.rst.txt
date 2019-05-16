@@ -13,14 +13,14 @@ Gitone command-line interface (CLI)
 .. click:: cli.acm_cli:acm_cli
   :prog: acm
 
-.. click:: cli.caamp_cli:caamp_cli
-  :prog: caamp
+.. click:: cli.camendamp_cli:camendamp_cli
+  :prog: camendamp
 
-.. click:: cli.acamp_cli:acamp_cli
-  :prog: acamp
+.. click:: cli.acamendmp_cli:acamendmp_cli
+  :prog: acamendmp
 
-.. click:: cli.caam_cli:caam_cli
-  :prog: caam
+.. click:: cli.camendam_cli:camendam_cli
+  :prog: camendam
 
-.. click:: cli.acam_cli:acam_cli
-  :prog: acam
+.. click:: cli.acamendm_cli:acamendm_cli
+  :prog: acamendm

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>gitone.caamp &#8212; Gitone 0.0.1 documentation</title>
+    <title>gitone.acamendm &#8212; Gitone 0.0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -87,7 +87,7 @@
 
           <div class="body" role="main">
             
-  <h1>Source code for gitone.caamp</h1><div class="highlight"><pre>
+  <h1>Source code for gitone.acamendm</h1><div class="highlight"><pre>
 <span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Optional</span>
@@ -95,8 +95,8 @@
 <span class="kn">import</span> <span class="nn">git</span>
 
 
-<div class="viewcode-block" id="caamp"><a class="viewcode-back" href="../../gitone.html#gitone.caamp.caamp">[docs]</a><span class="k">def</span> <span class="nf">caamp</span><span class="p">(</span><span class="n">commit_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Amend the previous commit with changes made to tracked files, then push.</span>
+<div class="viewcode-block" id="acamendm"><a class="viewcode-back" href="../../gitone.html#gitone.acamendm">[docs]</a><span class="k">def</span> <span class="nf">acamendm</span><span class="p">(</span><span class="n">commit_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Amend the previous commit with any new changes.</span>
 
 <span class="sd">    :param message: The commit message to be passed to the git commit command.</span>
 <span class="sd">    :note: A commit message will be automatically generated</span>
@@ -105,18 +105,17 @@
 
     <span class="n">repo</span> <span class="o">=</span> <span class="n">git</span><span class="o">.</span><span class="n">Repo</span><span class="p">(</span><span class="n">search_parent_directories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;--update&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;--all&quot;</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">commit_message</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;--all&quot;</span><span class="p">,</span> <span class="s2">&quot;--amend&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">commit_message</span><span class="p">))</span>
 
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;--amend&quot;</span><span class="p">,</span> <span class="s2">&quot;--reuse-message=HEAD&quot;</span><span class="p">),</span>
-              <span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;--force&quot;</span><span class="p">))</span></div>
+        <span class="nb">print</span><span class="p">(</span><span class="n">repo</span><span class="o">.</span><span class="n">git</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;--amend&quot;</span><span class="p">,</span> <span class="s2">&quot;--reuse-message=HEAD&quot;</span><span class="p">))</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">caamp</span><span class="p">()</span>
+    <span class="n">acamendm</span><span class="p">()</span>
 </pre></div>
 
           </div>

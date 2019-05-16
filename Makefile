@@ -15,7 +15,7 @@ docs: docs/index.html
 patch-release: patch release
 
 
-.venv/bin/activate: requirements_dev.txt
+.venv/bin/activate: requirements_dev.txt $(SRC) 
 ifneq ($(ENV), $(filter $(ENV),conda venv))
 	pip install $(ENV)
 endif
@@ -86,6 +86,7 @@ major: git
 clean: clean-build clean-pyc clean-test
 
 clean-docs:
+	rm -rf docs/*.html
 	rm -rf docs/_modules
 	rm -rf docs/searchindex.js
 	rm -rf docs/_sources
