@@ -26,7 +26,6 @@ def acm(message: Optional[str] = None) -> None:
     changed = new_list + del_list + mod_list
 
     if any(changed):
-
         new_str = f"New files: {', '.join(new_list)}. " if new_list else ""
         del_str = f"Deleted files: {', '.join(del_list)}. " if del_list else ""
         mod_str = f"Modified files: {', '.join(mod_list)}." if mod_list else ""
