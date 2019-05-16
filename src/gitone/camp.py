@@ -16,8 +16,8 @@ def camp(message: Optional[str] = None) -> None:
     """
     cam(message=message) if message else cam()
     repo = git.Repo(search_parent_directories=True)
-    repo.git.push()
-    print(repo.git.status())
+    status, stdout, stderr = repo.git.push(extended_output = True)
+    print(f"Status: {status}, Output: {stdout}, Message: {stderr}.")
 
 
 if __name__ == "__main__":
