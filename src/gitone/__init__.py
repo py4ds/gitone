@@ -10,5 +10,5 @@ from gitone.camendam import camendam
 from gitone.acamendm import acamendm
 
 __author__ = "Martin Skarzynski"
-__version__ = '0.0.22'
+__version__ = '0.0.23'
 __all__ = ["camp", "acmp", "cam", "acm", "camendamp", "acamendmp", "camendam", "acamendm"]
