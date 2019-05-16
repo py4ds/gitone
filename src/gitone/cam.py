@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from typing import Optional
+from itertools import chain
 
 import git
 
@@ -15,10 +16,12 @@ def cam(commit_message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
+    diffs = [repo.index.diff(None), repo.index.diff(repo.head.commit)]
+
     changed_file_lists = [
         [file.a_path
-         for file in repo.index.diff(None).iter_change_type(change_type)]
-        for change_type in ('D', 'M')
+         for file in diff.iter_change_type(change_type)]
+        for diff, change_type in zip(diffs, ('D', 'M'))
     ]
 
     if any(changed_file_lists):
