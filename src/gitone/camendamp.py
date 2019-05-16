@@ -4,6 +4,8 @@ from typing import Optional
 
 import git
 
+from gitone.camendam import camendam
+
 
 def camendamp(message: Optional[str] = None) -> None:
     """Amend the previous commit with changes made to tracked files, then push.
@@ -14,15 +16,8 @@ def camendamp(message: Optional[str] = None) -> None:
     """
 
     repo = git.Repo(search_parent_directories=True)
-
-    print(repo.git.add("--update"))
-
-    if message:
-        print(repo.git.commit("--all", "--amend", message=message))
-
-    else:
-        print(repo.git.commit("--amend", "--reuse-message=HEAD"),
-              repo.git.push("--force"))
+    camendam(message=message) if message else camendam()
+    repo.git.push("--force")
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ def camp(message: Optional[str] = None) -> None:
     :note: A commit message will be automatically generated
            if the ``message`` argument is not provided.
     """
-    cam(message=message)
+    cam(message=message) if message else cam()
     repo = git.Repo(search_parent_directories=True)
     repo.git.push()
     print(f"\nPushing to {', '.join(repo.remote().urls)}.")

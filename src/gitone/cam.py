@@ -17,32 +17,44 @@ def cam(message: Optional[str] = None) -> None:
 
     diffs = repo.index.diff(None), repo.index.diff(repo.head.commit)
 
-    changed_file_lists = [
-        [file.a_path
-         for file in diff.iter_change_type(change_type)]
-        for diff, change_type in zip(diffs, ('D', 'M'))
+    deleted_file_lists = [
+        [file.a_path for file
+         in diff.iter_change_type('D')]
+        for diff in diffs
     ]
 
-    print(changed_file_lists)
+    modified_file_lists = [
+        [file.a_path for file
+         in diff.iter_change_type('M')]
+        for diff in diffs
+    ]
+
+    changed_file_lists = deleted_file_lists + modified_file_lists
 
     if any(changed_file_lists):
 
-        prefixes = "Deleted files:", "Modified files:"
+        deleted = [
+            f"Deleted files: {', '.join(deleted_file_list)}. "
+            if deleted_file_lists else ""
+            for deleted_file_list in deleted_file_lists
+        ]
 
-        deleted, modified = (
-            f"{prefix} {', '.join(changed)}. " if changed else ""
-            for prefix, changed in zip(prefixes, changed_file_lists)
-        )
+        modified = [
+            f"Modified files: {', '.join(modified_file_list)}. "
+            if modified_file_list else ""
+            for modified_file_list in modified_file_lists
+        ]
 
         print("Adding deleted and modified files.",
               repo.git.add("--update"))
+        print("Deleted files:", deleted)
+        print("Modified files:", modified_file_lists)
 
         if message:
             print(repo.git.commit(changed_file_lists,
                                   message=message))
 
         else:
-
             print(repo.git.commit(changed_file_lists,
                                   message=deleted + modified))
 
