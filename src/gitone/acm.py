@@ -15,13 +15,12 @@ def acm(message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
-    new_list = repo.untracked_files
-
     def get_changes(change_type):
         for diff in [repo.index.diff(None), repo.index.diff(repo.head.commit)]:
             for file in diff.iter_change_type(change_type):
                 yield file.a_path
 
+    new_list = repo.untracked_files
     del_list = list(set(get_changes('D')))
     mod_list = list(set(get_changes('M')))
     changed = new_list + del_list + mod_list
