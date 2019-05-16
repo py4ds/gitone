@@ -21,7 +21,8 @@ def acm(message: Optional[str] = None) -> None:
                 yield file.a_path
 
     new_list = repo.untracked_files
-    del_list = list(set(get_changes('D')))
+    # Not sure why deleted files have change_type == 'A'...
+    del_list = list(set(get_changes('A'))) + list(set(get_changes('D')))
     mod_list = list(set(get_changes('M')))
     changed = new_list + del_list + mod_list
 

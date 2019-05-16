@@ -20,8 +20,8 @@ def cam(message: Optional[str] = None) -> None:
             for file in diff.iter_change_type(change_type):
                 yield file.a_path
 
-    del_list = list(set(get_changes('D')))
-    print(del_list)
+    # Not sure why deleted files have change_type == 'A'...
+    del_list = list(set(get_changes('A'))) + list(set(get_changes('D')))
     mod_list = list(set(get_changes('M')))
     changed = del_list + mod_list
 
