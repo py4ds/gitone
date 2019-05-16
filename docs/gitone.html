@@ -163,38 +163,8 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 </dd></dl>
 
 <dl class="function">
-<dt id="gitone.camendamp">
-<code class="descclassname">gitone.</code><code class="descname">camendamp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendamp.html#camendamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendamp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with changes made to tracked files, then push.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>The previous commit message will be reused
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="gitone.acamendmp">
-<code class="descclassname">gitone.</code><code class="descname">acamendmp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendmp.html#acamendmp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amend the previous commit with any new changes, then push the commit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
-</dd>
-<dt class="field-even">Note</dt>
-<dd class="field-even"><p>The previous commit message will be reused
-if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="gitone.camendam">
-<code class="descclassname">gitone.</code><code class="descname">camendam</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/camendam.html#camendam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.camendam" title="Permalink to this definition">¶</a></dt>
+<dt id="gitone.amend">
+<code class="descclassname">gitone.</code><code class="descname">amend</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/amend.html#amend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.amend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with changes made to tracked files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -208,9 +178,39 @@ if the <code class="docutils literal notranslate"><span class="pre">message</spa
 </dd></dl>
 
 <dl class="function">
-<dt id="gitone.acamendm">
-<code class="descclassname">gitone.</code><code class="descname">acamendm</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/acamendm.html#acamendm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.acamendm" title="Permalink to this definition">¶</a></dt>
+<dt id="gitone.amendp">
+<code class="descclassname">gitone.</code><code class="descname">amendp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/amendp.html#amendp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.amendp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amend the previous commit with changes made to tracked files, then push.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>The previous commit message will be reused
+if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="gitone.aamend">
+<code class="descclassname">gitone.</code><code class="descname">aamend</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/aamend.html#aamend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.aamend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amend the previous commit with any new changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>The previous commit message will be reused
+if the <code class="docutils literal notranslate"><span class="pre">message</span></code> argument is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="gitone.aamendp">
+<code class="descclassname">gitone.</code><code class="descname">aamendp</code><span class="sig-paren">(</span><em>message: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/aamendp.html#aamendp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.aamendp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amend the previous commit with any new changes, then push the commit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – The commit message to be passed to the git commit command.</p>
