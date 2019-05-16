@@ -15,46 +15,28 @@ def cam(message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
-    diffs = repo.index.diff(None), repo.index.diff(repo.head.commit)
+    def get_changes(change_type):
+        for diff in [repo.index.diff(None), repo.index.diff(repo.head.commit)]:
+            for file in diff.iter_change_type(change_type):
+                yield file.a_path
 
-    deleted_file_lists = [
-        [file.a_path for file
-         in diff.iter_change_type('D')]
-        for diff in diffs
-    ]
+    dellist, modlist = (list(get_changes(c_type)) for c_type in ('D', 'M'))
+    changed_list = dellist + modlist
 
-    modified_file_lists = [
-        [file.a_path for file
-         in diff.iter_change_type('M')]
-        for diff in diffs
-    ]
+    if any(changed_list):
 
-    changed_file_lists = deleted_file_lists + modified_file_lists
+        deleted = f"Deleted files: {', '.join(dellist)}. " if dellist else ""
+        modified = f"Modified files: {', '.join(modlist)}." if modlist else ""
 
-    if any(changed_file_lists):
+        auto_message = deleted + modified
 
-        deleted = [
-            f"Deleted files: {', '.join(deleted_file_list)}. "
-            if deleted_file_lists else ""
-            for deleted_file_list in deleted_file_lists
-        ]
-
-        modified = [
-            f"Modified files: {', '.join(modified_file_list)}. "
-            if modified_file_list else ""
-            for modified_file_list in modified_file_lists
-        ]
-
-        print("Adding deleted and modified files.",
-              repo.git.add("--update"))
+        print(repo.git.add("--update"))
 
         if message:
-            print(repo.git.commit(changed_file_lists,
-                                  message=message))
+            print(repo.git.commit(changed_list, message=message))
 
         else:
-            print(repo.git.commit(changed_file_lists,
-                                  message=deleted + modified))
+            print(repo.git.commit(changed_list, message=auto_message))
 
     else:
         print("There are no deleted or modified files.")
