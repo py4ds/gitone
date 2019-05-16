@@ -18,6 +18,7 @@ def camendamp(message: Optional[str] = None) -> None:
     repo = git.Repo(search_parent_directories=True)
     camendam(message=message) if message else camendam()
     repo.git.push("--force")
+    print(f"Pushing to {', '.join(repo.remote().urls)}.")
 
 
 if __name__ == "__main__":

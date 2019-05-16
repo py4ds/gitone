@@ -17,8 +17,8 @@ def acamendm(message: Optional[str] = None) -> None:
 
     print(repo.git.add("--all"))
 
-    if commit_message:
-        print(repo.git.commit("--all", "--amend", message=commit_message))
+    if message:
+        print(repo.git.commit("--all", "--amend", message=message))
 
     else:
         print(repo.git.commit("--amend", "--reuse-message=HEAD"))

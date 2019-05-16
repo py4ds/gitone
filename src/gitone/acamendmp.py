@@ -17,12 +17,13 @@ def acamendmp(message: Optional[str] = None) -> None:
 
     print(repo.git.add("--all"))
 
-    if commit_message:
-        print(repo.git.commit("--all", "--amend", message=commit_message))
+    if message:
+        print(repo.git.commit("--all", "--amend", message=message))
 
     else:
         print(repo.git.commit("--amend", "--reuse-message=HEAD"),
               repo.git.push("--force"))
+    print(f"Pushing to {', '.join(repo.remote().urls)}.")
 
 
 if __name__ == "__main__":
