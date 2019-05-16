@@ -8,7 +8,7 @@ from gitone.cam import cam
 
 
 def camp(message: Optional[str] = None) -> None:
-    """Add and commit changes made to tracked files, then push the commit.
+    """Add and commit all changes made to tracked files, then push the commit.
 
     :param message: The commit message to be passed to the git commit command.
     :note: A commit message will be automatically generated
