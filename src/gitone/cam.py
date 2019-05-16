@@ -21,6 +21,7 @@ def cam(message: Optional[str] = None) -> None:
                 yield file.a_path
 
     del_list = list(set(get_changes('D')))
+    print(del_list)
     mod_list = list(set(get_changes('M')))
     changed = del_list + mod_list
 
