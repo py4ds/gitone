@@ -15,50 +15,30 @@ def acm(message: Optional[str] = None) -> None:
 
     repo = git.Repo(search_parent_directories=True)
 
-    untracked = repo.untracked_files
+    new_list = repo.untracked_files
 
-    diffs = repo.index.diff(None), repo.index.diff(repo.head.commit)
+    def get_changes(change_type):
+        for diff in [repo.index.diff(None), repo.index.diff(repo.head.commit)]:
+            for file in diff.iter_change_type(change_type):
+                yield file.a_path
 
-    deleted_file_lists = [
-        [file.a_path for file
-         in diff.iter_change_type('D')]
-        for diff in diffs
-    ]
+    del_list = list(set(get_changes('D')))
+    mod_list = list(set(get_changes('M')))
+    changed = new_list + del_list + mod_list
 
-    modified_file_lists = [
-        [file.a_path for file
-         in diff.iter_change_type('M')]
-        for diff in diffs
-    ]
+    if any(changed):
 
-    changed_file_lists = untracked + deleted_file_lists + modified_file_lists
+        new_str = f"New files: {', '.join(new_list)}. " if new_list else ""
+        del_str = f"Deleted files: {', '.join(del_list)}. " if del_list else ""
+        mod_str = f"Modified files: {', '.join(mod_list)}." if mod_list else ""
 
-    if any(changed_file_lists):
-
-        new = f"New files: {', '.join(untracked)}. " if untracked else ""
-
-        deleted = [
-            f"Deleted files: {', '.join(deleted_file_list)}. "
-            if deleted_file_lists else ""
-            for deleted_file_list in deleted_file_lists
-        ]
-
-        modified = [
-            f"Modified files: {', '.join(modified_file_list)}. "
-            if modified_file_list else ""
-            for modified_file_list in modified_file_lists
-        ]
-
-        print(f"Adding new, deleted, and modified files.",
-              repo.git.add("--all"))
+        print(repo.git.add("--all"))
 
         if message:
-            print(repo.git.commit(changed_file_lists,
-                                  message=message))
-        else:
+            print(repo.git.commit(changed, message=message))
 
-            print(repo.git.commit(changed_file_lists,
-                                  message=new + deleted + modified))
+        else:
+            print(repo.git.commit(changed, message=new_str + del_str + mod_str))
 
     else:
         print("There are no new, deleted, or modified files.")

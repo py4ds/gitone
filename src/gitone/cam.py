@@ -6,7 +6,7 @@ import git
 
 
 def cam(message: Optional[str] = None) -> None:
-    """Add and commit changes made to tracked files.
+    """Commit all changes made to tracked files.
 
     :param message: The commit message to be passed to the git commit command.
     :note: A commit message will be automatically generated
