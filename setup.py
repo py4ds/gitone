@@ -33,7 +33,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Extract code, markdown, and yaml files from R markdown.",
+    description="Combine multiple git version controls steps into one.",
     entry_points={
         'console_scripts': [
             'cam=cli.cam_cli:cam_cli',
