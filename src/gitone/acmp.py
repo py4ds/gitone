@@ -17,7 +17,7 @@ def acmp(message: Optional[str] = None) -> None:
 
     acm(message=message) if message else acm()
     repo = git.Repo(search_parent_directories=True)
-    print(repo.git.push("--verbose", with_extended_output=True)[2])
+    print(repo.git.push(with_extended_output=True)[2])
 
 
 if __name__ == "__main__":
