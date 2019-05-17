@@ -16,7 +16,7 @@ def camp(message: Optional[str] = None) -> None:
     """
     cam(message=message) if message else cam()
     repo = git.Repo(search_parent_directories=True)
-    status, stdout, stderr = repo.git.push(extended_output = True)
+    status, stdout, stderr = repo.git.push(with_extended_output=True)
     print(f"Status: {status}, Output: {stdout}, Message: {stderr}.")
 
 

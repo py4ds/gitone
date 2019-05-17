@@ -17,7 +17,7 @@ def acmp(message: Optional[str] = None) -> None:
 
     acm(message=message) if message else acm()
     repo = git.Repo(search_parent_directories=True)
-    status, stdout, stderr = repo.git.push(extended_output = True)
+    status, stdout, stderr = repo.git.push(with_extended_output=True)
     print(f"Status: {status}, Output: {stdout}, Message: {stderr}.")
 
 

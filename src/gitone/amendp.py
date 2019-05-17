@@ -17,7 +17,8 @@ def amendp(message: Optional[str] = None) -> None:
 
     amend(message=message) if message else amend()
     repo = git.Repo(search_parent_directories=True)
-    status, stdout, stderr = repo.git.push("--force", extended_output = True)
+    status, stdout, stderr = repo.git.push("--force",
+                                           with_extended_output=True)
     print(f"Status: {status}, Output: {stdout}, Message: {stderr}.")
 
 
