@@ -52,6 +52,9 @@
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">gitone package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-gitone.spa">gitone.spa module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-gitone.spp">gitone.spp module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-gitone">Module contents</a></li>
 </ul>
 </li>
@@ -99,6 +102,51 @@
             
   <div class="section" id="gitone-package">
 <h1>gitone package<a class="headerlink" href="#gitone-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-gitone.spa">
+<span id="gitone-spa-module"></span><h2>gitone.spa module<a class="headerlink" href="#module-gitone.spa" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="gitone.spa.spa">
+<code class="descclassname">gitone.spa.</code><code class="descname">spa</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/spa.html#spa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.spa.spa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stash local changes, pull with <code class="docutils literal notranslate"><span class="pre">--rebase</span></code>, and apply local changes.</p>
+<dl class="field-list">
+<dt class="field-odd">Note</dt>
+<dd class="field-odd"><p>Use <code class="docutils literal notranslate"><span class="pre">spa()</span></code> if you try to pull with <code class="docutils literal notranslate"><span class="pre">--rebase</span></code>
+and get an error that says:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">pull</span> <span class="k">with</span> <span class="n">rebase</span><span class="p">:</span> <span class="n">You</span> <span class="n">have</span> <span class="n">unstaged</span> <span class="n">changes</span><span class="o">.</span>
+<span class="n">error</span><span class="p">:</span> <span class="n">please</span> <span class="n">commit</span> <span class="ow">or</span> <span class="n">stash</span> <span class="n">them</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">spa()</span></code> the stash is preserved. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">drop</span></code> to
+remove the most recent stash.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-gitone.spp">
+<span id="gitone-spp-module"></span><h2>gitone.spp module<a class="headerlink" href="#module-gitone.spp" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="gitone.spp.spp">
+<code class="descclassname">gitone.spp.</code><code class="descname">spp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/gitone/spp.html#spp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitone.spp.spp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stash local changes, pull with <code class="docutils literal notranslate"><span class="pre">--rebase</span></code>, and pop the latest stash.</p>
+<dl class="field-list">
+<dt class="field-odd">Note</dt>
+<dd class="field-odd"><p>Use <code class="docutils literal notranslate"><span class="pre">spp()</span></code> if you try to pull with <code class="docutils literal notranslate"><span class="pre">--rebase</span></code>
+and get an error that says:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">pull</span> <span class="k">with</span> <span class="n">rebase</span><span class="p">:</span> <span class="n">You</span> <span class="n">have</span> <span class="n">unstaged</span> <span class="n">changes</span><span class="o">.</span>
+<span class="n">error</span><span class="p">:</span> <span class="n">please</span> <span class="n">commit</span> <span class="ow">or</span> <span class="n">stash</span> <span class="n">them</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">spp()</span></code> the stash is not preserved, so there is not need to
+use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">drop</span></code> to remove the most recent stash.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-gitone">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gitone" title="Permalink to this headline">¶</a></h2>
 <p>gitone: a Python package that facilitates git version control.</p>
