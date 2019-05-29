@@ -1,5 +1,6 @@
 .PHONY: clean clean-test clean-pyc clean-build docs help env test lint git patch minor major dist release
 
+README = README.rst
 PKG = gitone
 ENV = venv
 PYTHON = .venv/bin/python3
@@ -53,7 +54,7 @@ endif
 travis: .travis.yml
 	.venv/bin/travis encrypt --add deploy.password
 
-docs/index.html: clean $(DOCS) $(TESTS) $(SRC) ## generate Sphinx HTML documentation, including API docs
+docs/index.html: clean $(README) $(DOCS) $(TESTS) $(SRC) ## generate Sphinx HTML documentation, including API docs
 	# rm docs/*.html
 	# rm -rf docs/_modules docs/_sources docs/_static
 	mv docs html

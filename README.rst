@@ -117,7 +117,7 @@ Setting up a repo can be a pain.
 
 .. |Build| image:: https://travis-ci.org/marskar/gitone.svg?branch=master
     :target: https://travis-ci.org/marskar/gitone
-.. |License| image:: https://img.shields.io/badge/License-MIT-green.svg
+.. |License| image:: https://img.shields.io/badge/License-MIT-brightgreen.svg
    :target: https://opensource.org/licenses/MIT
 .. |PyPI| image:: https://img.shields.io/pypi/v/gitone.svg
    :target: https://pypi.python.org/pypi/gitone
