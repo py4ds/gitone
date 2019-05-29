@@ -1,7 +1,7 @@
 Gitone: Combine multiple **git** version controls steps into **one**
 ====================================================================
 
-|PyPI| |Updates|
+|Status| |PyPI| |Updates|
 
 Introduction
 ------------
@@ -116,6 +116,8 @@ Setting up a repo can be a pain.
 - Write an ``init`` function and command to handle all of the repo setup steps like in `this Makefile <https://github.com/marskar/cookiecutter/blob/master/%7B%7Bcookiecutter.repo%7D%7D/Makefile#L21>`__. Inspired by the `usethis <https://usethis.r-lib.org/reference/use_github.html>`__ R package.
 
 
+.. |Status| image:: https://www.repostatus.org/badges/latest/active.svg
+   :alt: Project Status: Active – The project has reached a stable, usable state and is being actively developed.
 .. |PyPI| image:: https://img.shields.io/pypi/v/gitone.svg
    :target: https://pypi.python.org/pypi/gitone
 .. |Updates| image:: https://pyup.io/repos/github/marskar/gitone/shield.svg
