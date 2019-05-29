@@ -13,7 +13,6 @@ SRC = $(wildcard src/$(PKG)/*.py)
 init: .git/
 env: .venv/bin/activate
 docs: docs/index.html
-patch-release: patch release
 
 
 .venv/bin/activate: requirements_dev.txt $(SRC) 
