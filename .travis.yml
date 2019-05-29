@@ -1,5 +1,7 @@
+dist: xenial
 language: python
 python:
+- 3.7
 - 3.6
 install: pip install -U tox-travis pytest-mypy recommonmark
 script: tox
@@ -12,4 +14,4 @@ deploy:
   on:
     tags: true
     repo: marskar/gitone
-    python: 3.6
+    python: 3.7
