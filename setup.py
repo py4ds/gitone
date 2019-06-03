@@ -35,7 +35,7 @@ setuptools.setup(
             'amend=cli.amend_cli:amend_cli',
             'amendp=cli.amendp_cli:amendp_cli',
             'aamend=cli.aamend_cli:aamend_cli',
-            'aamendp=cli.acamendmp_cli:aamendp_cli',
+            'aamendp=cli.aamendp_cli:aamendp_cli',
         ],
     },
     install_requires=requirements,
