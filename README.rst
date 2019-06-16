@@ -1,7 +1,7 @@
 Gitone: Combine multiple **git** version controls steps into **one**
 ====================================================================
 
-|Build| |License| |PyPI| |Status| |Updates| |Versions|
+|Build| |Chat| |License| |PyPI| |Status| |Updates| |Versions|
 
 Introduction
 ------------
@@ -117,6 +117,9 @@ Setting up a repo can be a pain.
 
 .. |Build| image:: https://travis-ci.org/marskar/gitone.svg?branch=master
     :target: https://travis-ci.org/marskar/gitone
+.. |Chat| image:: https://badges.gitter.im/py4ds/gitone.svg
+   :alt: Join the chat at https://gitter.im/py4ds/gitone
+   :target: https://gitter.im/py4ds/gitone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 .. |License| image:: https://img.shields.io/badge/License-MIT-brightgreen.svg
    :target: https://opensource.org/licenses/MIT
 .. |PyPI| image:: https://img.shields.io/pypi/v/gitone.svg
