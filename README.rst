@@ -42,9 +42,9 @@ The command line interface relies on the `click <https://click.palletsprojects.c
 Documentation and Code
 ----------------------
 
-The documentation is hosted at https://marskar.github.io/gitone/.
+The documentation is hosted at https://py4ds.github.io/gitone/.
 
-The code is hosted at https://github.com/marskar/gitone.
+The code is hosted at https://github.com/py4ds/gitone.
 
 Installation
 ------------
@@ -113,10 +113,10 @@ Next Steps
 
 Setting up a repo can be a pain.
 
-- Write an ``init`` function and command to handle all of the repo setup steps like in `this Makefile <https://github.com/marskar/cookiecutter/blob/master/%7B%7Bcookiecutter.repo%7D%7D/Makefile#L21>`__. Inspired by the `usethis <https://usethis.r-lib.org/reference/use_github.html>`__ R package.
+- Write an ``init`` function and command to handle all of the repo setup steps like in `this Makefile <https://github.com/py4ds/cookiecutter/blob/master/%7B%7Bcookiecutter.repo%7D%7D/Makefile#L21>`__. Inspired by the `usethis <https://usethis.r-lib.org/reference/use_github.html>`__ R package.
 
-.. |Build| image:: https://travis-ci.org/marskar/gitone.svg?branch=master
-    :target: https://travis-ci.org/marskar/gitone
+.. |Build| image:: https://travis-ci.org/py4ds/gitone.svg?branch=master
+    :target: https://travis-ci.org/py4ds/gitone
 .. |Chat| image:: https://badges.gitter.im/py4ds/gitone.svg
    :alt: Join the chat at https://gitter.im/py4ds/gitone
    :target: https://gitter.im/py4ds/gitone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
@@ -127,8 +127,8 @@ Setting up a repo can be a pain.
 .. |Status| image:: https://www.repostatus.org/badges/latest/active.svg
    :alt: Project Status: Active – The project has reached a stable, usable state and is being actively developed.
    :target: https://www.repostatus.org/#active
-.. |Updates| image:: https://pyup.io/repos/github/marskar/gitone/shield.svg
-   :target: https://pyup.io/repos/github/marskar/gitone/
+.. |Updates| image:: https://pyup.io/repos/github/py4ds/gitone/shield.svg
+   :target: https://pyup.io/repos/github/py4ds/gitone/
 .. |Versions| image:: https://img.shields.io/pypi/pyversions/gitone.svg
    :alt: PyPI - Python Version
    :target: https://www.python.org/downloads/
