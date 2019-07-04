@@ -10,7 +10,7 @@ from gitone.aamend import aamend
 from gitone.aamendp import aamendp
 
 __author__ = "Martin Skarzynski"
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 __all__ = [
     "camp",
     "acmp",
